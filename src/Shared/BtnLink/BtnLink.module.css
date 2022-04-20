@@ -1,0 +1,16 @@
+.BtnLink {
+  background-color: none;
+  border: 2px solid hsl(250, 100%, 70%);
+  border-radius: 10px;
+  color: var(--subTextColor);
+  text-decoration: none;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.BtnLink:hover {
+  background: linear-gradient(0.25turn, #474bff 0%, #bc48ff 100%);
+  color: var(--bgColor-Card);
+  border: none;
+}

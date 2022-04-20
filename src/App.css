@@ -1,38 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bgColor: hsl(0deg 0% 7%);
+  --bgColor-Card: hsl(240deg 2% 12%);
+
+  --borderColor: hsl(0deg 0% 16%);
+  --borderCorners: 20px;
+
+  --mainTextColor: hsl(0deg 0% 98%);
+  --bodyTextColor: hsl(0deg 0% 84%);
+  --subTextColor: hsl(0deg 0% 84% / 70%);
+
+  --ff-JetBrains: 'JetBrains Mono', monospace;
+
+  --fs-1: 32px;
+  --fs-2: 26px;
+  --fs-3: 24px;
+  --fs-35: 20px;
+  --fs-4: 18px;
+  --fs-5: 16px;
+  --fs-6: 14px;
+  --fs-7: 12px;
+}
+
+body {
+  background-color: var(--bgColor);
+  color: var(--mainTextColor);
+  font-family: var(--ff-JetBrains);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff-JetBrains);
+  color: var(--mainTextColor);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: var(--fs-1);
+}
+
+h2 {
+  font-size: var(--fs-3);
+}
+
+h3 {
+  font-size: var(--fs-4);
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: var(--fs-6);
+  color: var(--bodyTextColor);
+}
+
 .App {
-  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding-inline: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-Main {
+  margin-bottom: 4rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 768px) {
+  .App {
+    padding-inline: 4rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 1024px) {
+  .App-Main {
+    position: relative;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 1440px) {
+  .App {
+    display: flex;
+    width: 1400px;
+    gap: 30px;
+    margin: 0 auto;
+  }
+
+  .App-Main {
+    min-width: 75%;
+    max-width: 75%;
+    margin-top: 100px;
   }
 }

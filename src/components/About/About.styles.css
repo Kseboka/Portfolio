@@ -1,0 +1,27 @@
+.about {
+  display: none;
+}
+
+.about.active {
+  display: block;
+}
+
+.about-tech {
+  margin: 1rem 0;
+}
+
+.about-tech--items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .about-tech--items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .about-tech--items img {
+    width: 75px;
+  }
+}

@@ -1,0 +1,17 @@
+.headerTitle {
+  font-weight: bold;
+}
+
+.underline {
+  height: 6px;
+  width: 5rem;
+  background: linear-gradient(0.25turn, #474bff 0%, #bc48ff 100%);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .headerTitle {
+    font-size: var(--fs-1);
+  }
+}

@@ -1,0 +1,53 @@
+.contact {
+  display: none;
+}
+
+.contact.active {
+  display: block;
+}
+.contact-form {
+  width: 100%;
+}
+
+.contact-userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.contact-userInfo > input,
+.contact-userMessage > textarea {
+  background: none;
+  border: 1px solid var(--borderColor);
+  border-radius: 10px;
+  width: 100%;
+  color: white;
+  padding: 1rem;
+  font-size: var(--fs-5);
+  font: inherit;
+  resize: none;
+}
+
+.contact-userInfo > input:focus,
+.contact-userMessage > textarea:focus {
+  outline: none;
+  border: 1px solid hsl(250, 100%, 70%);
+}
+
+.contact-submit {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  background: none;
+  border: 2px solid hsl(250, 100%, 70%);
+  border-radius: 10px;
+  font-size: var(--fs-4);
+  color: var(--subTextColor);
+  font-family: var(--ff-JetBrains);
+}
+
+.contact-submit:hover {
+  background: linear-gradient(0.25turn, #474bff 0%, #bc48ff 100%);
+  color: var(--bgColor-Card);
+  border: none;
+}

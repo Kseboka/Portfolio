@@ -1,0 +1,134 @@
+.side-bar {
+  margin-bottom: 1rem;
+  max-height: 150px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid var(--borderColor);
+  transition: 0.5s ease-in-out;
+  position: relative;
+}
+
+.side-bar.active {
+  max-height: 500px;
+}
+
+.side-bar--toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 6px;
+
+  background: linear-gradient(0.25turn, #474bff 0%, #bc48ff 100%);
+  border: none;
+  color: var(--bgColor-Card);
+  border-radius: 0 20px 0 20px;
+}
+
+.side-bar--profile {
+  display: flex;
+  align-items: center;
+}
+
+.side-bar--profile img {
+  width: 125px;
+}
+
+.side-bar--profile-info h1 {
+  font-size: var(--fs-35);
+}
+
+.side-bar--profile-info p {
+  font-size: var(--fs-7);
+  color: var(--subTextColor);
+}
+
+.side-bar--socials li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+
+.side-bar--icons {
+  color: hsl(250, 100%, 70%);
+}
+
+.side-bar--socials p {
+  color: var(--subTextColor);
+  font-size: var(--fs-7);
+}
+.side-bar--socials a,
+small {
+  text-decoration: none;
+  color: var(--mainTextColor);
+  font-size: var(--fs-6);
+}
+
+@media (min-width: 768px) {
+  .side-bar {
+    max-height: 175px;
+  }
+  .side-bar--profile-info h1 {
+    font-size: var(--fs-3);
+  }
+
+  .side-bar--profile img {
+    width: 150px;
+  }
+
+  .side-bar--socials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .side-bar {
+    max-height: 200px;
+  }
+
+  .side-bar--toggle {
+    width: 60px;
+    height: 50px;
+  }
+
+  .side-bar--profile img {
+    width: 175px;
+  }
+
+  .side-bar--profile-info h1 {
+    font-size: var(--fs-2);
+  }
+
+  .side-bar--socials p {
+    color: var(--subTextColor);
+    font-size: var(--fs-7);
+  }
+}
+
+@media (min-width: 1440px) {
+  .side-bar {
+    max-height: 575px;
+    position: sticky;
+    top: 100px;
+  }
+
+  .side-bar--profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .side-bar--profile-info {
+    text-align: center;
+  }
+
+  .side-bar--toggle {
+    display: none;
+  }
+
+  .side-bar--socials {
+    grid-template-columns: 1fr;
+  }
+}

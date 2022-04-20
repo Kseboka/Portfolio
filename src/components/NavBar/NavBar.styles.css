@@ -1,0 +1,47 @@
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: hsl(240deg 1% 17% / 75%);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--borderColor);
+  border-radius: 20px 20px 0 0;
+  padding: 1rem;
+}
+
+.nav-bar--list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-bar--btn {
+  font-family: var(--ff-JetBrains);
+  color: var(--subTextColor);
+  background: none;
+  border: none;
+  font-size: var(--fs-5);
+}
+
+.nav-bar--btn.active {
+  color: hsl(250, 100%, 70%);
+}
+
+@media (min-width: 1024px) {
+  .nav-bar {
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    right: 0;
+    left: auto;
+    width: fit-content;
+    background: hsl(240deg 1% 17% / 75%);
+    border-radius: 0 20px;
+    padding-inline: 2rem;
+  }
+  .nav-bar--btn {
+    color: var(--mainTextColor);
+  }
+}
